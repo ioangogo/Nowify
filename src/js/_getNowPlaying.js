@@ -144,10 +144,11 @@ const getTrackInfo = (data) => {
         document.getElementById('artistName').innerHTML = displayArtists;
         document.getElementById('trackName').innerHTML  = data.item.name;
         document.getElementById('artwork').src          = data.item.album.images[0].url;
+        document.getElementById('background').backgroundimage = url(document.getElementById('artwork').src)
         config.backgroundDiv.classList.add('song-active');
 
         // Set the colour scheme to match the artwork
-        getArtWorkColours();
+        
 
     } else if (storedTrackID == fetchedTrackID){
 
